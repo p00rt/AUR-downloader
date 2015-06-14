@@ -1,12 +1,13 @@
+#!/usr/bin/python
 import os
 
-os.system("rmdir /tmp/.AUR_DOWN")
 os.system("mkdir /tmp/.AUR_DOWN")
-in_pkgs = raw_input( "Type AUR packages names separated by commas without spaces (eg. eggs,milk,cheese): " )
-med_pkgs = in_pkgs.split(',')
+in_pkgs = raw_input( "Type AUR packages names separated byspaces (eg. eggs spam foo): " )
+med_pkgs = in_pkgs.split(' ')
 pkgs = []
 for i in med_pkgs:
     pkgs.append(i)
+del in_pkgs, med_pkgs
 
 
 def pkgs_install():
